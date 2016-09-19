@@ -4,7 +4,6 @@ Why?
 It is fairly easy to create map object in Qlik view and Qlik sense. Following are two awesome tutorials by Michael Tarallo on how to create map object:
 
 https://community.qlik.com/docs/DOC-6941 (Point map)
-
 https://community.qlik.com/docs/DOC-7354 (Polygon map)
 
 In practice, polygon map is much harder to implement than point map. It is because with longitutude and latitude you can build a point map easily. But for polygon maps, not only an KML file is required to difine boundaries, a region field in data source is also expected to link your point with KML. This region field must be the same field with KML file.In addition, this region field must be in your KML file as well.
@@ -21,20 +20,14 @@ How?
 
 
 In the repository, there is runnable JAR file call GeoCodeMerger.jar.
-
 Download GeoCodeMerger.jar, 2003-9.csv and world.kml file to your local machine.
-
 Open commandline console-> cd /your working directory/ -> java -jar GeoCodeMerger.jar
-
 You will see the code running and an output folder is generated. In the output folder, You will find new csv files with one more column regionCode.
+
 requirement:
 
+
 One KML file(if there is more than one, the first is chosen)
-
 Multiple CSV file with a longitude column and a latitude column.(You may use 
-
-java -jar GeoCodeMerger.jar (longitudeAlias) (latitudeAlias) 
-
-to specify new column names for longitude and latitudeAlias.For example:
-
+java -jar GeoCodeMerger.jar (longitudeAlias) (latitudeAlias) to specify new column names for longitude and latitudeAlias.For example:
 java -jar GeoCodeMerger.jar col2 col5 )
