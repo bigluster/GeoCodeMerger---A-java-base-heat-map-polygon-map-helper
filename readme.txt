@@ -1,4 +1,5 @@
 Why?
+
 It is fairly easy to create map object in Qlik view and Qlik sense. Following are two awesome tutorials by Michael Tarallo on how to create map object:
 https://community.qlik.com/docs/DOC-6941 (Point map)
 https://community.qlik.com/docs/DOC-7354 (Polygon map)
@@ -6,10 +7,12 @@ In practice, polygon map is much harder to implement than point map. It is becau
 Take Michael's second tutorial as example(where you can download several useful KML files like US states.KML and world.KML), there is a CountryISOCode to link with world.kml. Almost all geography data comes with longitude and latitude(else it won't be a geo data),but very few data sets contain CountryISOCode.
 
 What?
+
 This Java programme is a demostration of using ray-casting to associate points with polygon. Base on the content of KML file, it builds several country objects and test if points are inside this "countries"; if yes, append a regionCode at the end of output CSV. It is functional, but only tested with world.kml(https://community.qlik.com/docs/DOC-7354). 
 At this moment it works with only CSV files.
 
 How?
+
 In the repository, there is runnable JAR file call GeoCodeMerger.jar.
 Download GeoCodeMerger.jar, 2003-9.csv and world.kml file to your local machine.
 Open commandline console-> cd /your working directory/ -> java -jar GeoCodeMerger.jar
