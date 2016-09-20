@@ -2,6 +2,7 @@
 It is fairly easy to create map object in Qlik view and Qlik sense. Following are two awesome tutorials by Michael Tarallo on how to create map object:
 
 https://community.qlik.com/docs/DOC-6941 (Point map)
+
 https://community.qlik.com/docs/DOC-7354 (Polygon map)
 
 In practice, polygon map is much harder to implement than point map. It is because with longitutude and latitude you can build a point map easily. But for polygon maps, not only an KML file is required to difine boundaries, a region field in data source is also expected to link points with KML. This region field must be the same field with KML file.Take Michael's second tutorial as example(where you can download several useful KML files like US states.KML and world.KML), CountryISOCode is neccessary to link with world.kml. 
