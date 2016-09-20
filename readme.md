@@ -27,4 +27,4 @@ You may also run
 java -jar GeoCodeMerger.jar longitude latitude directoryPath
 to merge files in another folder
 
-# Thank you,cheers
+cheers
